@@ -49,11 +49,11 @@ Where `exports` is just a reference to `module.exports`
 exports = module.exports;
 ```
 
-And the return value of the **importing module `require` function** is always a cached version (no longer a reference) taken from the object referred to by the **exporting module `module.exports` object, not taken through this exporting module `exports`.**
+And the value returned by calling the `require` function in the **importing module** is always a cached version (no longer a reference) taken from the object referred to by the **exporting module `module.exports` object, not taken through this exporting module `exports`.**
 
 ### **`node:...`  Protocol**
 
-From NodeJS 18 onward is it recommended to prefix all built-in imports with the **node protocol** like so:
+From NodeJS 18 onward it is recommended to prefix all built-in imports with the **node protocol** like so:
 
 ```js
 const path = require("node:path");
@@ -65,7 +65,7 @@ const path = require("node:path");
 
 ## **`node:events` module**
 
-Must of Node builtin modules like `fs`, `stream` or `http` extends from the `EventEmitter` class.
+Most of Node built-in modules like `fs`, `stream` or `http` extends from the `EventEmitter` class.
 
 ## **`node:fs` module**
 
